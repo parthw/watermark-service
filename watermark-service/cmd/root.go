@@ -5,6 +5,7 @@ import (
 	"log"
 
 	"github.com/spf13/cobra"
+	"github.com/watermark-services/watermark-service/internal/utils"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
@@ -17,7 +18,7 @@ var rootCmd = &cobra.Command{
 	Use:   "watermark-service",
 	Short: "To watermark images",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("To watermark images")
+		fmt.Println("Application to watermark images")
 	},
 }
 
@@ -29,12 +30,16 @@ func Execute() {
 	}
 }
 
-// InitializeCobraViper to init cobra cli and viper config
-func InitializeCobraViper() {
-	cobra.OnInitialize(initConfig)
+func init() {
+	cobra.OnInitialize(initApplication)
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.watermark-service.yaml)")
+}
 
-	initStartCmd()
+func initApplication() {
+	// To init configuration using viper
+	initConfig()
+	// To initialize utils.Log
+	utils.InitializeLogger()
 }
 
 // initConfig reads in config file and ENV variables if set.

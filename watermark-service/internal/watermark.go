@@ -11,7 +11,7 @@ import (
 // AddWaterMark to add watermark to image
 func AddWaterMark(bgImgName, markImgName, outImgName string) error {
 
-	utils.Log.Infof("Initiating add watermakr process with backgroud image - %v and watermark image - %v",
+	utils.Log.Infof("Initiating add watermark process with backgroud image - %v and watermark image - %v",
 		bgImgName, markImgName)
 	bgImg, err := openImage(bgImgName)
 	if err != nil {
