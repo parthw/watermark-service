@@ -1,27 +1,27 @@
-package watermark
+package service
 
 import (
 	"image"
 	"math"
 
 	"github.com/disintegration/imaging"
-	"github.com/watermark-services/watermark-service/internal/utils"
+	"github.com/watermark-services/watermark-service/internal/logger"
 )
 
 // AddWaterMark to add watermark to image
 func AddWaterMark(bgImgName, markImgName, outImgName string) error {
 
-	utils.Log.Infof("Initiating add watermark process with backgroud image - %v and watermark image - %v",
+	logger.Log.Infof("Initiating add watermark process with backgroud image - %v and watermark image - %v",
 		bgImgName, markImgName)
 	bgImg, err := openImage(bgImgName)
 	if err != nil {
-		utils.Log.Error(err)
+		logger.Log.Error(err)
 		return err
 	}
 
 	markImg, err := resizeImage(markImgName, 200, 200)
 	if err != nil {
-		utils.Log.Error(err)
+		logger.Log.Error(err)
 		return err
 	}
 
@@ -35,7 +35,7 @@ func AddWaterMark(bgImgName, markImgName, outImgName string) error {
 
 	err = imaging.Save(dst, outImgName)
 	if err != nil {
-		utils.Log.Error(err)
+		logger.Log.Error(err)
 		return err
 	}
 	return nil

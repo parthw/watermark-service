@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/spf13/cobra"
-	"github.com/watermark-services/watermark-service/internal/utils"
+	"github.com/watermark-services/watermark-service/internal/logger"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
@@ -39,7 +39,7 @@ func initApplication() {
 	// To init configuration using viper
 	initConfig()
 	// To initialize utils.Log
-	utils.InitializeLogger()
+	logger.InitializeLogger()
 }
 
 // initConfig reads in config file and ENV variables if set.

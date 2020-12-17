@@ -1,9 +1,8 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
+	"github.com/watermark-services/watermark-service/internal/server"
 )
 
 // startCmd represents the start command
@@ -11,7 +10,7 @@ var startCmd = &cobra.Command{
 	Use:   "start",
 	Short: "To start server",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("start called")
+		server.StartServer()
 	},
 }
 

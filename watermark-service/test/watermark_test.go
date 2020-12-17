@@ -4,14 +4,14 @@ import (
 	"os"
 	"testing"
 
-	watermark "github.com/watermark-services/watermark-service/internal"
-	"github.com/watermark-services/watermark-service/internal/utils"
+	"github.com/watermark-services/watermark-service/internal/logger"
+	"github.com/watermark-services/watermark-service/internal/service"
 )
 
 func TestWatermarkPackageFunctions(t *testing.T) {
-	utils.InitializeLogger()
+	logger.InitializeLogger()
 	outputFile := "testdata/test-final-image.png"
-	err := watermark.AddWaterMark("testdata/test-bg.png", "testdata/test-logo.png", outputFile)
+	err := service.AddWaterMark("testdata/test-bg.png", "testdata/test-logo.png", outputFile)
 	if err != nil {
 		t.Errorf("Failed to create image with error %v - ", err)
 	}
