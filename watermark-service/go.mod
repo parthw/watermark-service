@@ -3,6 +3,7 @@ module github.com/watermark-services/watermark-service
 go 1.15
 
 require (
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/disintegration/imaging v1.6.2
 	github.com/gin-gonic/gin v1.6.3
 	github.com/mitchellh/go-homedir v1.1.0
