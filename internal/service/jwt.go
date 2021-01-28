@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/watermark-services/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/logger"
 )
 
 // jwtCustomClaims are custom claims extending default ones.

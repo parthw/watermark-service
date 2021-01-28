@@ -1,6 +1,6 @@
-# watermark-services
+# watermark-service
 
-A combination of microservices to add a watermark on pdf
+IN Progress!
 
 ## References
 

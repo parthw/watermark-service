@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/watermark-services/watermark-service/internal/server"
+	"github.com/watermark-service/internal/server"
 )
 
 // startCmd represents the start command

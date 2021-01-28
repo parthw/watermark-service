@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/watermark-services/watermark-service/internal/logger"
-	"github.com/watermark-services/watermark-service/internal/service"
+	"github.com/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/service"
 )
 
 func TestWatermarkPackageFunctions(t *testing.T) {

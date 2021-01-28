@@ -1,4 +1,4 @@
-module github.com/watermark-services/watermark-service
+module github.com/watermark-service
 
 go 1.15
 

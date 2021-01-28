@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/spf13/cobra"
-	"github.com/watermark-services/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/logger"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"

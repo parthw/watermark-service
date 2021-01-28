@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/watermark-services/watermark-service/internal/service"
+	"github.com/watermark-service/internal/service"
 )
 
 //Credentials struct

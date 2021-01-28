@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/watermark-services/watermark-service/internal/controller"
-	"github.com/watermark-services/watermark-service/internal/logger"
-	"github.com/watermark-services/watermark-service/internal/middlewares"
+	"github.com/watermark-service/internal/controller"
+	"github.com/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/middlewares"
 )
 
 // StartServer represent starting rest-api server

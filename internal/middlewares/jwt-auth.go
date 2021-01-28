@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/watermark-services/watermark-service/internal/logger"
-	"github.com/watermark-services/watermark-service/internal/service"
+	"github.com/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/service"
 )
 
 // AuthorizeJWT validates the token from the http request, returning a 401 if it's not valid

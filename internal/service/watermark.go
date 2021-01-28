@@ -5,7 +5,7 @@ import (
 	"math"
 
 	"github.com/disintegration/imaging"
-	"github.com/watermark-services/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/logger"
 )
 
 // AddWaterMark to add watermark to image

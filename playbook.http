@@ -1,0 +1,14 @@
+### POST Request to /api/watermark without token
+curl -X POST -H "Content-Type: multipart/form-data" -F "bg=@/Users/parth/Documents/personal-git/watermark-service/test/testdata/test-bg.png" -F "logo=@/Users/parth/Documents/personal-git/watermark-service/test/testdata/test-logo.png"  -F outname=finale.png http://localhost:8080/api/watermark --output finale.png
+
+
+### POST Request to /login to get token
+curl -X POST -H "Content-Type: application/json" --data '{"username": "Something", "password": "Password"}' "localhost:8080/login"
+
+
+### POST Request to /api/watermark with token
+curl -X POST -H "Content-Type: multipart/form-data" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU29tZXRoaW5nIiwiYWRtaW4iOnRydWUsImV4cCI6MTYwOTUwNzQyNiwiaWF0IjoxNjA5NDIxMDI2LCJpc3MiOiJwYXJ0aHcifQ.4PxdAKF92d1C-b4XdS1bhEpNfvwdfxS5ot38xKrbPRk"  -F "bg=@/Users/parth/Documents/personal-git/watermark-service/test/testdata/test-bg.png" -F "logo=@/Users/parth/Documents/personal-git/watermark-service/test/testdata/test-logo.png"  -F outname=finale.png http://localhost:8080/api/watermark --output finale.png
+
+
+### GET Request to /health
+curl localhost:8080/health

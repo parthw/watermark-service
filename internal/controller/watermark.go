@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/watermark-services/watermark-service/internal/logger"
-	"github.com/watermark-services/watermark-service/internal/service"
+	"github.com/watermark-service/internal/logger"
+	"github.com/watermark-service/internal/service"
 )
 
 // PutWaterMark to save files to directory
@@ -15,7 +15,7 @@ func PutWaterMark(ctx *gin.Context) error {
 
 	logger.Log.Infof("bgFile - %v, logoFile -%v", bgFile.Filename, logoFile.Filename)
 
-	dst := "/Users/parth/Documents/personal-git/watermark-services/watermark-service/files/"
+	dst := "/Users/parth/Documents/personal-git/watermark-service/files/"
 	bgImgPath := dst + bgFile.Filename
 	markImgName := dst + logoFile.Filename
 	err := ctx.SaveUploadedFile(bgFile, bgImgPath)
